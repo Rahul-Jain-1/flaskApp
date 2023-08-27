@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classifier App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        
+        .navbar button {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            background-color: inherit;
+            font-size: 16px;
+        }
+        .navbar h3 {
+            color: black;
+            margin: 0;
+            padding: 20px 10px 0px 0px ;
+            text-align : center;
+        }
+        .navbar button:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .content {
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .form-container button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            float: right;
+        }
+
+        .form-container button:hover {
+            background-color: #555;
+        }
+
+        .input-column {
+            float: left;
+            width: 50%;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .input-column label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .input-column input {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <button id="intro-button" >Introduction</button>
+        <h3>EEG EYE STATE CLASSIFIER</h3>
+    </div>
+  
+    <div class="content form-container">
+        <h1>EEG Eye State Classifier ML App</h1>
+        <form action="predict" method="post">
+            <div class="input-column">
+                <label for="AF3">AF3</label>
+                <input type="text" id="AF3" name="AF3" required="required" />
+                
+                <label for="F7">F7</label>
+                <input type="text" id="F7" name="F7" required="required" />
+                
+                <label for="F3">F3</label>
+                <input type="text" id="F3" name="F3" required="required" />
+                
+                <label for="FC5">FC5</label>
+                <input type="text" id="FC5" name="FC5" required="required" />
+                
+                <label for="T7">T7</label>
+                <input type="text" id="T7" name="T7" required="required" />
+                
+                <label for="P7">P7</label>
+                <input type="text" id="P7" name="P7" required="required" />
+                
+                <label for="O1">O1</label>
+                <input type="text" id="O1" name="O1" required="required" />
+            </div>
+            <div class="input-column">
+                <label for="O2">O2</label>
+                <input type="text" id="O2" name="O2" required="required" />
+                
+                <label for="P8">P8</label>
+                <input type="text" id="P8" name="P8" required="required" />
+                
+                <label for="T8">T8</label>
+                <input type="text" id="T8" name="T8" required="required" />
+                
+                <label for="FC6">FC6</label>
+                <input type="text" id="FC6" name="FC6" required="required" />
+                
+                <label for="F4">F4</label>
+                <input type="text" id="F4" name="F4" required="required" />
+                
+                <label for="F8">F8</label>
+                <input type="text" id="F8" name="F8" required="required" />
+                
+                <label for="AF4">AF4</label>
+                <input type="text" id="AF4" name="AF4" required="required" />
+            </div>
+            <div style="clear: both;"></div>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction is defined %}
+        <p>Predicted Value: {{ prediction }}</p>
+        {% endif %}
+    </div>
+    
+    <script>
+        const introButton = document.getElementById("intro-button");
+        introButton.addEventListener("click", function() {
+            window.location.href = "/eegML/introduction";
+        });
+    </script>
+</body>
+</html>

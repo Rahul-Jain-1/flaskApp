@@ -1,0 +1,4 @@
+Flask
+Pickle
+numpy
+sklear

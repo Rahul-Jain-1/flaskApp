@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classifier App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        
+        .navbar button {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            background-color: inherit;
+            font-size: 16px;
+        }
+        .navbar h3 {
+            color: black;
+            margin: 0;
+            padding: 20px 10px 0px 0px ;
+            text-align : center;
+        }
+        .navbar button:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <button id="intro-button" >Introduction</button>
+        <button id="prediction-button">Prediction</button>
+        <h3>EEG EYE STATE CLASSIFIER</h3>
+    </div>
+    
+    
+    <h1>Introduction : </h1>
+    <p>The EEG Eye State Classification project is a machine learning application that aims to predict the eye state of an individual based on their electroencephalogram (EEG) data. EEG is a technique used to record electrical activity in the brain by placing electrodes on the scalp. By analyzing the EEG signals, it is possible to infer the state of the individual's eyes, whether they are open or closed.</p>
+    <p>The project involves developing a machine learning model that can accurately classify the eye state based on the EEG data. This typically involves several steps, including data preprocessing, feature extraction, and model training. The EEG signals are preprocessed to remove noise and artifacts, and relevant features are extracted to represent the data. Various machine learning algorithms, such as support vector machines (SVM), random forests, or deep learning models, can be used to train the classifier.</p>
+    <p>The trained model is then deployed in a user-friendly interface using Streamlit, a popular Python library for building interactive web applications. The interface allows users to upload their EEG data or provide real-time data through appropriate sensors. The EEG signals are processed by the model, and the predicted eye state (open or closed) is displayed to the user.</p>
+    <p>The EEG Eye State Classification project has various applications in areas such as healthcare, human-computer interaction, and neurology. It can be used to monitor drowsiness or alertness levels in drivers, detect sleep disorders, or enable hands-free control in assistive technologies.</p>
+    <p>By accurately predicting the eye state from EEG signals, this project showcases the potential of machine learning techniques in analyzing brain activity and provides a practical tool for eye state classification based on EEG data.</p>
+     
+    
+</body>
+</html>
