@@ -1,4 +1,4 @@
 Flask
-Pickle
+pickle
 numpy
-sklear
+sklearn
